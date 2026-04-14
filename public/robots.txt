@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samriddhi.org/sitemap.xml
