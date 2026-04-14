@@ -5,143 +5,162 @@ import { HeroSection } from '@/components/hero-section'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { ProgrammeCard } from '@/components/programme-card'
 import {
+  GraduationCap,
   Brain,
-  Sprout,
   Heart,
   BookOpen,
   Users,
-  Lightbulb,
-  Leaf,
-  Target,
-  Zap,
   Smile,
+  Home,
+  Activity,
+  Shield,
+  Star,
+  Sprout,
+  Lightbulb,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Programmes - Samriddhi Foundation',
-  description: 'Explore our diverse range of neuroscience-informed educational programmes.',
+  title: 'Programmes - Samriddhi Early Learning Center',
+  description:
+    'Explore all programmes offered by Samriddhi — from preschool and early stimulation to counselling, therapies and awareness programs.',
 }
 
-export default function ProgrammesPage() {
-  const programmes = [
-    {
-      icon: <Brain className="w-12 h-12" />,
-      title: 'Neuroscience Fundamentals',
-      description:
-        'Understanding the brain development and how learning happens at different stages of life. Suitable for educators, parents, and individuals interested in the science of learning.',
-    },
-    {
-      icon: <Sprout className="w-12 h-12" />,
-      title: 'Holistic Growth',
-      description:
-        'Integrated approach to physical, emotional, and intellectual development. Designed for schools, organizations, and individuals seeking comprehensive development.',
-    },
-    {
-      icon: <Heart className="w-12 h-12" />,
-      title: 'Emotional Intelligence',
-      description:
-        'Building emotional awareness, resilience, and healthy relationships. Ideal for adolescents, young adults, and professionals.',
-    },
-    {
-      icon: <BookOpen className="w-12 h-12" />,
-      title: 'Adaptive Learning',
-      description:
-        'Customized educational approaches that honor individual learning styles. Perfect for students of all ages seeking personalized learning paths.',
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: 'Community Building',
-      description:
-        'Creating supportive environments where everyone feels valued and included. Great for teams, organizations, and community groups.',
-    },
-    {
-      icon: <Lightbulb className="w-12 h-12" />,
-      title: 'Critical Thinking',
-      description:
-        'Fostering creative problem-solving and independent thought processes. Essential for academic excellence and professional success.',
-    },
-    {
-      icon: <Leaf className="w-12 h-12" />,
-      title: 'Mindfulness & Meditation',
-      description:
-        'Practices for stress reduction, focus, and present-moment awareness. Beneficial for anyone seeking mental clarity and emotional balance.',
-    },
-    {
-      icon: <Target className="w-12 h-12" />,
-      title: 'Goal Setting & Achievement',
-      description:
-        'Framework for defining meaningful goals and tracking progress. Practical for students, professionals, and anyone pursuing their dreams.',
-    },
-    {
-      icon: <Zap className="w-12 h-12" />,
-      title: 'Life Skills Training',
-      description:
-        'Practical abilities for communication, time management, and self-care. Essential skills for thriving in modern life.',
-    },
-    {
-      icon: <Smile className="w-12 h-12" />,
-      title: 'Well-being Initiative',
-      description:
-        'Comprehensive programmes focused on overall wellness and happiness. Covers physical health, mental health, and life satisfaction.',
-    },
-  ]
+const programmes = [
+  {
+    icon: <GraduationCap className="w-8 h-8" />,
+    title: 'Preschool',
+    description:
+      'Admission open for Nursery, LKG & UKG. A nurturing environment where children take their first steps in structured learning.',
+  },
+  {
+    icon: <Sprout className="w-8 h-8" />,
+    title: 'School Collaboration',
+    description:
+      'Samriddhi Early Learning Centre collaborates with Ganges Educational Center for enriched and holistic early education.',
+  },
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: 'Early Stimulation & Intervention',
+    description:
+      'Targeted Early Stimulation & Early Intervention Program to support optimal brain development in young children.',
+  },
+  {
+    icon: <Heart className="w-8 h-8" />,
+    title: 'Counselling Services',
+    description:
+      'Professional counselling service for Children, Adolescents & Seniors — supporting emotional health at every stage of life.',
+  },
+  {
+    icon: <BookOpen className="w-8 h-8" />,
+    title: 'Tuition & Special Education',
+    description:
+      'Personalized tuition and special education support tailored to each child\'s unique learning needs.',
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: 'Inclusive Education',
+    description:
+      'An inclusive model where every child, irrespective of ability, background or circumstance, belongs and thrives.',
+  },
+  {
+    icon: <Star className="w-8 h-8" />,
+    title: 'Samriddhi Early Learning Center',
+    description:
+      'Our flagship early learning center providing a holistic environment for children\'s cognitive, emotional and physical development.',
+  },
+  {
+    icon: <Smile className="w-8 h-8" />,
+    title: 'Social-Emotional Well-being',
+    description:
+      'Mental Health and Wellbeing program for Young Adolescents — building resilience, self-awareness and healthy relationships.',
+  },
+  {
+    icon: <Home className="w-8 h-8" />,
+    title: 'Home School Training',
+    description:
+      'Structured Home School Training for Parents — equipping families to support their child\'s learning journey at home.',
+  },
+  {
+    icon: <Activity className="w-8 h-8" />,
+    title: 'Therapies (Online & Offline)',
+    description:
+      'Specialised therapies available online and offline for children with learning differences, delivered by trained professionals.',
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: 'Awareness & Prevention',
+    description:
+      'Education on Early Childhood Abuse, Puberty Challenges & Suicide Prevention for Parents, Teachers and Care Givers.',
+  },
+]
 
+export default function ProgrammesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <HeroSection
         title="Our Programmes"
-        subtitle="Transformative learning experiences designed for every stage of life"
+        subtitle="Your child has one childhood — make it memorable"
       />
 
+      {/* Why Section */}
       <SectionWrapper className="bg-background">
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-            Why Choose Our Programmes?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+              Why Samriddhi
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-foreground mb-3">
+              Our Approach to Early Learning
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
-                title: 'Science-Backed',
+                icon: <Brain className="w-6 h-6 text-secondary" />,
+                title: 'Brain-Based',
                 description:
-                  'All programmes are grounded in current neuroscience research and evidence-based educational practices.',
+                  'All programmes are grounded in how the developing brain learns best — through play, exploration and experience.',
               },
               {
-                title: 'Personalized',
+                icon: <Lightbulb className="w-6 h-6 text-secondary" />,
+                title: 'Child-Centred',
                 description:
-                  'We recognize that every individual is unique and tailor our approaches to meet specific needs and learning styles.',
+                  'Each child is unique. We honour individual differences and tailor our approach to every learner.',
               },
               {
-                title: 'Practical',
+                icon: <Heart className="w-6 h-6 text-secondary" />,
+                title: 'Holistic',
                 description:
-                  'Our programmes are designed to be immediately applicable, creating lasting change in daily life and decision-making.',
+                  'We nurture cognitive, emotional, physical and social development — the whole child, not just academics.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-muted/20 p-6 rounded-lg">
-                <h3 className="font-serif font-bold text-foreground mb-2 text-center">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground text-sm text-center">
-                  {item.description}
-                </p>
+              <div key={item.title} className="bg-muted/20 p-5 rounded-lg flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-0.5">{item.icon}</div>
+                <div>
+                  <h3 className="font-serif font-bold text-foreground mb-1 text-sm">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </SectionWrapper>
 
+      {/* All Programmes Grid */}
       <SectionWrapper className="bg-muted/30">
-        <div className="mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+        <div className="mb-8 text-center">
+          <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+            Explore All
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-3">
             Available Programmes
           </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-            Browse our complete range of programmes. Click on any programme to learn more or get in touch to
-            enroll.
+          <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
+            Get engaged, explore, experience. Contact us to enroll or learn more about any programme.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {programmes.map((programme) => (
             <ProgrammeCard
               key={programme.title}
@@ -156,34 +175,30 @@ export default function ProgrammesPage() {
       {/* Delivery Methods */}
       <SectionWrapper className="bg-background">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-6 text-center">
             How We Deliver
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
-                title: 'In-Person Workshops',
-                description:
-                  'Interactive, immersive experiences where participants engage directly with facilitators and peers.',
+                title: 'In-Person',
+                description: 'Face-to-face sessions at our learning center in Bangalore.',
               },
               {
-                title: 'Online Courses',
-                description:
-                  'Flexible, self-paced learning with video content, interactive modules, and community support.',
+                title: 'Online',
+                description: 'Remote sessions and therapies available for families anywhere.',
               },
               {
-                title: 'Customized Programs',
-                description:
-                  'Tailored solutions for organizations, schools, and groups with specific needs and goals.',
+                title: 'Home Visits',
+                description: 'Our educators come to you for home school training and support.',
               },
             ].map((method) => (
-              <div key={method.title} className="bg-card p-8 rounded-lg shadow-md border-l-4 border-primary">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-4">
-                  {method.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {method.description}
-                </p>
+              <div
+                key={method.title}
+                className="bg-card p-5 rounded-lg shadow-sm border-l-4 border-primary"
+              >
+                <h3 className="font-serif font-bold text-foreground mb-2">{method.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{method.description}</p>
               </div>
             ))}
           </div>
@@ -192,18 +207,20 @@ export default function ProgrammesPage() {
 
       {/* CTA */}
       <SectionWrapper className="bg-primary text-primary-foreground text-center">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-          Ready to Transform Your Learning?
-        </h2>
-        <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-          Contact us today to discuss which programme is the best fit for your needs.
-        </p>
-        <a
-          href="/contact"
-          className="inline-block bg-primary-foreground text-primary px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
-        >
-          Get in Touch
-        </a>
+        <div className="max-w-xl mx-auto">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+            Ready to Enroll?
+          </h2>
+          <p className="text-sm mb-6 opacity-90">
+            Contact us today to discuss which programme is the right fit for your child or family.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            Get in Touch
+          </a>
+        </div>
       </SectionWrapper>
 
       <Footer />

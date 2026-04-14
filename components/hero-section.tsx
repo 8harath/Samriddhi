@@ -17,7 +17,7 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <div
-      className="relative h-[500px] md:h-[600px] flex items-center justify-center mt-[70px]"
+      className="relative h-[460px] md:h-[540px] flex items-center justify-center mt-[64px] md:mt-[100px]"
       style={
         backgroundImage
           ? {
@@ -40,7 +40,7 @@ export function HeroSection({
         {ctaText && ctaLink && (
           <Link
             href={ctaLink}
-            className="inline-block bg-primary hover:opacity-90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-opacity"
+            className="inline-block bg-accent hover:opacity-90 text-accent-foreground px-8 py-3 rounded-lg font-medium transition-opacity"
           >
             {ctaText}
           </Link>

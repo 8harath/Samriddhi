@@ -3,11 +3,12 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { HeroSection } from '@/components/hero-section'
 import { SectionWrapper } from '@/components/section-wrapper'
-import { Eye, Compass, Heart } from 'lucide-react'
+import { Eye, Compass } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Vision & Values - Samriddhi Foundation',
-  description: 'Our vision, mission, and core values.',
+  title: 'Vision & Mission - Samriddhi Early Learning Center',
+  description:
+    'Our vision, mission and values — dedicated to early stimulation and holistic development of every child.',
 }
 
 export default function VisionPage() {
@@ -15,147 +16,154 @@ export default function VisionPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <HeroSection
-        title="Our Vision & Values"
-        subtitle="The principles that guide our work and inspire our community"
+        title="Vision &amp; Mission"
+        subtitle="The beliefs and values that guide everything we do"
       />
 
       <SectionWrapper className="bg-background">
-        {/* Vision Statement */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="flex gap-6 items-start">
-            <Eye className="w-12 h-12 text-primary flex-shrink-0 mt-2" />
+        <div className="max-w-4xl mx-auto space-y-8">
+
+          {/* Vision */}
+          <div className="flex gap-5 items-start">
+            <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+              <Eye className="w-6 h-6 text-primary" />
+            </div>
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-1">
                 Our Vision
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+                A World Where Every Child Thrives
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                A world where every individual has access to education that honors their unique nature,
-                nurtures their potential, and empowers them to lead meaningful, fulfilling, and purposeful
-                lives. We envision societies where learning is driven by curiosity, grounded in scientific
-                understanding, and centered on the wellbeing of every person.
+              <p className="text-muted-foreground leading-relaxed">
+                A world where every child — irrespective of economic background, social circumstance or
+                ability — has access to quality early education that honors their unique nature, nurtures
+                their potential, and prepares them confidently for school and for life.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Mission Statement */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="flex gap-6 items-start">
-            <Compass className="w-12 h-12 text-primary flex-shrink-0 mt-2" />
+          {/* Mission */}
+          <div className="flex gap-5 items-start">
+            <div className="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+              <Compass className="w-6 h-6 text-secondary" />
+            </div>
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-1">
                 Our Mission
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Early Stimulation for Every Child
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                To empower individuals of all ages through neuroscience-informed education and holistic
-                development programmes that foster intellectual growth, emotional resilience, physical
-                wellness, and spiritual clarity. We bridge the gap between cutting-edge neuroscience
-                research and practical educational implementation.
+              <p className="text-muted-foreground leading-relaxed">
+                To provide Early Stimulation of the Brain and the overall development of children,
+                irrespective of their economic and social backgrounds. We do this through inclusive
+                education, therapeutic support, counselling, and community awareness programmes —
+                because we believe education is the birth right of every child.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Core Values */}
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            Our Core Values
-          </h2>
-          <div className="space-y-6">
-            {[
-              {
-                icon: '🧠',
-                title: 'Science-Informed',
-                description:
-                  'We base all our approaches on current neuroscience research and evidence-based educational practices, continuously updating our methods as new discoveries emerge.',
-              },
-              {
-                icon: '🌱',
-                title: 'Holistic Development',
-                description:
-                  'We recognize and nurture the complete person—cognitive, emotional, physical, and spiritual dimensions—understanding that true growth encompasses all aspects of being human.',
-              },
-              {
-                icon: '🤝',
-                title: 'Inclusive Community',
-                description:
-                  'We celebrate diversity and create spaces where everyone—regardless of background, ability, or circumstance—feels belonged, valued, and empowered to contribute.',
-              },
-              {
-                icon: '💚',
-                title: 'Compassionate Approach',
-                description:
-                  'We approach every individual with genuine empathy, understanding, and care, recognizing the unique challenges and strengths each person brings.',
-              },
-              {
-                icon: '✨',
-                title: 'Empowerment',
-                description:
-                  'We foster agency and self-determination, helping individuals become architects of their own growth and capable of making intentional choices for their futures.',
-              },
-              {
-                icon: '🔍',
-                title: 'Transparency & Accountability',
-                description:
-                  'We communicate openly about our methods, outcomes, and impact, maintaining high standards and continuously seeking feedback for improvement.',
-              },
-              {
-                icon: '🌍',
-                title: 'Accessibility',
-                description:
-                  'We believe high-quality learning experiences should be accessible to all, working to remove barriers of cost, geography, and circumstance.',
-              },
-              {
-                icon: '🚀',
-                title: 'Continuous Innovation',
-                description:
-                  'We embrace learning and growth, staying curious about better approaches and willing to evolve our practices based on evidence and community feedback.',
-              },
-            ].map((value, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-lg shadow-md border-l-4 border-primary hover:shadow-lg transition-shadow"
-              >
-                <div className="flex gap-4 items-start">
-                  <span className="text-3xl flex-shrink-0">{value.icon}</span>
+          {/* Quote */}
+          <div className="bg-primary text-primary-foreground p-7 rounded-lg text-center">
+            <p className="font-serif text-lg md:text-xl italic mb-2">
+              &ldquo;The question is not whether you can afford to invest in Early Learning;
+              it is whether you can afford not to.&rdquo;
+            </p>
+          </div>
+
+          {/* Values */}
+          <div>
+            <h2 className="font-serif text-2xl font-bold text-foreground mb-6 text-center">
+              Our Core Values
+            </h2>
+            <div className="space-y-3">
+              {[
+                {
+                  title: 'Inclusive',
+                  description:
+                    'Education is a birth right. We are open to all children regardless of ability, background or circumstance.',
+                },
+                {
+                  title: 'Child-Centred',
+                  description:
+                    'Each child is different, unique and special. Our methods are tailored to the individual, not a one-size-fits-all model.',
+                },
+                {
+                  title: 'Professional Excellence',
+                  description:
+                    'Our educators and therapists are trained professionals who create the right environment for every child to grow.',
+                },
+                {
+                  title: 'Holistic Development',
+                  description:
+                    'We nurture cognitive, emotional, physical and social growth — the whole child, not just academic performance.',
+                },
+                {
+                  title: 'Compassionate',
+                  description:
+                    'We approach every child and family with empathy, patience and genuine care for their wellbeing.',
+                },
+                {
+                  title: 'Community Driven',
+                  description:
+                    'As a not-for-profit, our work is driven by the needs of the community — not by profit motives.',
+                },
+                {
+                  title: 'Evidence-Based',
+                  description:
+                    'Our programmes are grounded in research on early brain development and best practices in early childhood education.',
+                },
+                {
+                  title: 'Empowering Families',
+                  description:
+                    'We equip parents and caregivers with knowledge, tools and training so the learning continues at home.',
+                },
+              ].map((value, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-5 rounded-lg shadow-sm border-l-4 border-primary flex gap-4 items-start hover:shadow-md transition-shadow"
+                >
+                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-accent text-xs font-bold">✓</span>
+                  </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-foreground mb-2">
+                    <h3 className="font-serif text-sm font-bold text-foreground mb-1">
                       {value.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground text-xs leading-relaxed">
                       {value.description}
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </SectionWrapper>
 
-      {/* Commitment Section */}
-      <SectionWrapper className="bg-secondary/10">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-            Our Commitment to You
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              'Providing high-quality, evidence-based programmes',
-              'Creating safe, inclusive learning environments',
-              'Offering personalized support for individual needs',
-              'Maintaining transparent communication',
-              'Continuously improving our offerings',
-              'Honoring your privacy and data security',
-            ].map((commitment, index) => (
-              <div key={index} className="flex gap-4 items-start">
-                <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-primary-foreground text-sm font-bold">✓</span>
+          {/* Commitment */}
+          <div className="bg-secondary/10 p-6 rounded-lg">
+            <h2 className="font-serif text-xl font-bold text-foreground mb-5 text-center">
+              Our Commitment to You
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {[
+                'Quality, evidence-based programmes for every child',
+                'Safe, inclusive and nurturing learning environments',
+                'Personalized support for individual needs',
+                'Transparent communication with families',
+                'Continuous improvement of our offerings',
+                'Programmes accessible regardless of background',
+              ].map((commitment, index) => (
+                <div key={index} className="flex gap-3 items-start">
+                  <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-primary-foreground text-xs font-bold">✓</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{commitment}</p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{commitment}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </div>
       </SectionWrapper>
 

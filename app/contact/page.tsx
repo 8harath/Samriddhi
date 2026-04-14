@@ -15,7 +15,6 @@ export default function ContactPage() {
     subject: '',
     message: '',
   })
-
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (
@@ -27,42 +26,48 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // TODO: Integrate with email service (e.g., Nodemailer, SendGrid)
     console.log('Form submitted:', formData)
     setSubmitted(true)
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-    setTimeout(() => setSubmitted(false), 3000)
+    setTimeout(() => setSubmitted(false), 4000)
   }
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <HeroSection
-        title="Get in Touch"
-        subtitle="We'd love to hear from you. Reach out to us today!"
+        title="Contact Us"
+        subtitle="We&apos;d love to hear from you — reach out to us today"
       />
 
       <SectionWrapper className="bg-background">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
             {/* Contact Information */}
             <div>
-              <h2 className="font-serif text-2xl font-bold text-foreground mb-8">
+              <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+                Reach Us
+              </p>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-6">
                 Contact Information
               </h2>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {/* Email */}
                 <div className="flex gap-4">
-                  <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                    <p className="text-muted-foreground">
-                      <a href="mailto:info@samriddhi.org" className="hover:text-primary transition-colors">
-                        info@samriddhi.org
-                      </a>
-                    </p>
-                    <p className="text-muted-foreground text-sm">
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Email</h3>
+                    <a
+                      href="mailto:samriddhielp@gmail.com"
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      samriddhielp@gmail.com
+                    </a>
+                    <p className="text-muted-foreground text-xs mt-0.5">
                       We typically respond within 24 hours
                     </p>
                   </div>
@@ -70,64 +75,75 @@ export default function ContactPage() {
 
                 {/* Phone */}
                 <div className="flex gap-4">
-                  <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                    <p className="text-muted-foreground">
-                      <a href="tel:+919876543210" className="hover:text-primary transition-colors">
-                        +91 (98765) 43210
-                      </a>
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      Monday - Friday, 9:00 AM - 6:00 PM IST
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Call Us Now</h3>
+                    <div className="space-y-0.5">
+                      {['+91 9741599110', '+91 9986999110', '+91 9590882642'].map((num) => (
+                        <a
+                          key={num}
+                          href={`tel:${num.replace(/\s/g, '')}`}
+                          className="block text-muted-foreground hover:text-primary transition-colors text-sm"
+                        >
+                          {num}
+                        </a>
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground text-xs mt-1">
+                      Monday – Saturday, 9:00 AM – 6:00 PM IST
                     </p>
                   </div>
                 </div>
 
                 {/* Address */}
                 <div className="flex gap-4">
-                  <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Address</h3>
-                    <p className="text-muted-foreground">
-                      Samriddhi Foundation<br />
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Address</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Samriddhi Early Learning Center<br />
                       [Street Address]<br />
-                      [City], [State] [PIN Code]<br />
-                      India
+                      Bangalore, Karnataka, India
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Additional Info */}
-              <div className="mt-12 bg-muted/30 p-6 rounded-lg">
-                <h3 className="font-semibold text-foreground mb-4">Quick Response</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Whether you&apos;re interested in our programmes, have questions about our approach, or
-                  want to collaborate, we&apos;re here to help. Choose the contact method that works best
-                  for you.
+              {/* Recognition badge */}
+              <div className="mt-8 bg-muted/30 p-5 rounded-lg">
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Government Recognized</span><br />
+                  Early Learning Center Trust, Govt of Karnataka<br />
+                  <span className="text-accent font-medium">Code: PP05081</span>
                 </p>
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <h2 className="font-serif text-2xl font-bold text-foreground mb-8">
-                Send us a Message
+              <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+                Send a Message
+              </p>
+              <h2 className="font-serif text-2xl font-bold text-foreground mb-6">
+                Get in Touch
               </h2>
 
               {submitted && (
-                <div className="mb-6 p-4 bg-secondary/15 border border-secondary rounded-lg">
-                  <p className="text-primary font-medium">
-                    Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
+                <div className="mb-5 p-4 bg-secondary/15 border border-secondary rounded-lg">
+                  <p className="text-primary font-medium text-sm">
+                    Thank you! Your message has been sent. We&apos;ll get back to you soon.
                   </p>
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-xs font-medium text-foreground mb-1.5">
                     Full Name *
                   </label>
                   <input
@@ -137,14 +153,14 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2.5 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Your name"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-xs font-medium text-foreground mb-1.5">
                     Email Address *
                   </label>
                   <input
@@ -154,14 +170,14 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2.5 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="phone" className="block text-xs font-medium text-foreground mb-1.5">
                     Phone Number
                   </label>
                   <input
@@ -170,14 +186,14 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2.5 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="+91 98765 43210"
                   />
                 </div>
 
                 {/* Subject */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="subject" className="block text-xs font-medium text-foreground mb-1.5">
                     Subject *
                   </label>
                   <select
@@ -186,12 +202,14 @@ export default function ContactPage() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2.5 border border-border rounded-lg bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Select a subject...</option>
+                    <option value="preschool-admission">Preschool Admission</option>
                     <option value="programme-inquiry">Programme Inquiry</option>
-                    <option value="workshop-booking">Workshop Booking</option>
-                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="therapy-services">Therapy Services</option>
+                    <option value="counselling">Counselling Services</option>
+                    <option value="collaboration">Collaboration / Partnership</option>
                     <option value="general">General Question</option>
                     <option value="feedback">Feedback</option>
                   </select>
@@ -199,7 +217,7 @@ export default function ContactPage() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-xs font-medium text-foreground mb-1.5">
                     Message *
                   </label>
                   <textarea
@@ -208,13 +226,12 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                    placeholder="Tell us what you'd like to know..."
+                    rows={4}
+                    className="w-full px-4 py-2.5 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    placeholder="Tell us how we can help..."
                   />
                 </div>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
@@ -223,23 +240,10 @@ export default function ContactPage() {
                 </button>
               </form>
 
-              <p className="text-xs text-muted-foreground mt-4 text-center">
-                We respect your privacy. Your information will only be used to respond to your inquiry.
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                Your information will only be used to respond to your inquiry.
               </p>
             </div>
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Map Section */}
-      <SectionWrapper className="bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
-            Find Us
-          </h2>
-          {/* TODO: Integrate with actual map (Google Maps, Mapbox, etc.) */}
-          <div className="bg-muted rounded-lg h-96 flex items-center justify-center text-muted-foreground border-2 border-border">
-            Map will be displayed here
           </div>
         </div>
       </SectionWrapper>

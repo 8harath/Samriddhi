@@ -3,138 +3,175 @@ import { Footer } from '@/components/footer'
 import { HeroSection } from '@/components/hero-section'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { ProgrammeCard } from '@/components/programme-card'
-import { StatCard } from '@/components/stat-card'
 import {
+  GraduationCap,
   Brain,
-  Sprout,
   Heart,
   BookOpen,
   Users,
-  Lightbulb,
-  Leaf,
-  Target,
-  Zap,
   Smile,
+  Home,
+  Activity,
+  Shield,
+  Lightbulb,
+  Star,
+  Sprout,
 } from 'lucide-react'
 
-export default function Home() {
-  const programmes = [
+export default function HomePage() {
+  const features = [
     {
-      icon: <Brain className="w-12 h-12" />,
-      title: 'Neuroscience Fundamentals',
-      description:
-        'Understanding the brain development and how learning happens at different stages of life.',
+      title: 'Inclusive Education',
+      description: 'Education is the birth right of every child and we are open for all.',
     },
     {
-      icon: <Sprout className="w-12 h-12" />,
-      title: 'Holistic Growth',
+      title: 'Children Are Curriculum',
       description:
-        'Integrated approach to physical, emotional, and intellectual development.',
+        'Each child is different, each child is unique, each one is special — so is our teaching method for each one of them.',
     },
     {
-      icon: <Heart className="w-12 h-12" />,
-      title: 'Emotional Intelligence',
-      description:
-        'Building emotional awareness, resilience, and healthy relationships.',
+      title: 'Professional Educators',
+      description: 'Our work is to provide them the right environment to grow with qualified and caring educators.',
     },
     {
-      icon: <BookOpen className="w-12 h-12" />,
-      title: 'Adaptive Learning',
+      title: 'Fully Equipped',
       description:
-        'Customized educational approaches that honor individual learning styles.',
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: 'Community Building',
-      description:
-        'Creating supportive environments where everyone feels valued and included.',
-    },
-    {
-      icon: <Lightbulb className="w-12 h-12" />,
-      title: 'Critical Thinking',
-      description:
-        'Fostering creative problem-solving and independent thought processes.',
-    },
-    {
-      icon: <Leaf className="w-12 h-12" />,
-      title: 'Mindfulness',
-      description:
-        'Practices for stress reduction, focus, and present-moment awareness.',
-    },
-    {
-      icon: <Target className="w-12 h-12" />,
-      title: 'Goal Setting',
-      description:
-        'Framework for defining meaningful goals and tracking progress.',
-    },
-    {
-      icon: <Zap className="w-12 h-12" />,
-      title: 'Life Skills',
-      description:
-        'Practical abilities for communication, time management, and self-care.',
-    },
-    {
-      icon: <Smile className="w-12 h-12" />,
-      title: 'Well-being Initiative',
-      description:
-        'Programs focused on overall wellness and happiness in daily life.',
+        'With lots of love, laughter, toys for tots and open sky — a perfect place to explore and live their imagination.',
     },
   ]
 
-  const stats = [
-    { number: '5000+', label: 'Lives Touched' },
-    { number: '50+', label: 'Programmes Offered' },
-    { number: '100+', label: 'Trained Facilitators' },
-    { number: '15+', label: 'Years of Service' },
+  const programmes = [
+    {
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: 'Preschool',
+      description: 'Admissions open for Nursery, LKG & UKG.',
+    },
+    {
+      icon: <Sprout className="w-8 h-8" />,
+      title: 'School Collaboration',
+      description: 'Samriddhi Early Learning Centre collaborates with Ganges Educational Center.',
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: 'Early Stimulation & Intervention',
+      description: 'Early Stimulation & Early Intervention Program for young children.',
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: 'Counselling Services',
+      description: 'Counselling service for Child, Adolescent & Seniors.',
+    },
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: 'Tuition & Special Education',
+      description: 'Personalized tuition and special education support.',
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Inclusive Education',
+      description: 'Creating spaces where every child belongs and thrives.',
+    },
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: 'Early Learning Center',
+      description: 'Samriddhi Early Learning Center for holistic child development.',
+    },
+    {
+      icon: <Smile className="w-8 h-8" />,
+      title: 'Social-Emotional Well-being',
+      description: 'Mental health and wellbeing for young adolescents.',
+    },
+    {
+      icon: <Home className="w-8 h-8" />,
+      title: 'Home School Training',
+      description: 'Home school training and guidance for parents.',
+    },
+    {
+      icon: <Activity className="w-8 h-8" />,
+      title: 'Therapies',
+      description: 'Online & offline therapies for children with learning differences.',
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Awareness & Prevention',
+      description:
+        'Education on early childhood abuse, puberty challenges & suicide prevention for parents, teachers & caregivers.',
+    },
   ]
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <HeroSection
-        title="Nature & Nurture"
-        subtitle="Empowering individuals through neuroscience-informed education and holistic development"
-        ctaText="Explore Our Programmes"
-        ctaLink="/programmes"
+        title="Welcome to Our Amazing World of Learning"
+        subtitle="Let's Play, Learn, Explore and Grow"
+        ctaText="Let's Go"
+        ctaLink="/about"
       />
 
-      {/* Welcome Strip */}
+      {/* About / Key Features */}
       <SectionWrapper className="bg-secondary/10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Welcome to Samriddhi
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            At Samriddhi, we believe in nurturing the complete human being. Our mission is to bridge
-            the gap between neuroscience research and practical education, creating environments where
-            individuals of all ages can flourish intellectually, emotionally, and spiritually.
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+              About our early learning program
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Welcome To Samriddhi
+            </h2>
+            <p className="text-muted-foreground text-sm">
+              A unique LEARNING program designed for very young kids
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {features.map((f) => (
+              <div
+                key={f.title}
+                className="bg-card p-5 rounded-lg shadow-sm border-l-4 border-accent"
+              >
+                <h3 className="font-serif font-bold text-foreground mb-1">{f.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{f.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Get Involved Quote */}
+      <SectionWrapper className="bg-primary text-primary-foreground text-center">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-4">
+            Get Involved!
           </p>
+          <p className="font-serif text-lg md:text-xl italic leading-relaxed mb-6">
+            &ldquo;Learning begins at birth and preparation for learning begins before birth. The investment done in
+            Early Education gives highest returns in future.&rdquo;
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            Join Now
+          </a>
         </div>
       </SectionWrapper>
 
-      {/* Stats Section */}
-      <SectionWrapper className="bg-background">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat) => (
-            <StatCard key={stat.label} number={stat.number} label={stat.label} />
-          ))}
-        </div>
-      </SectionWrapper>
-
-      {/* Programmes Section */}
+      {/* Programmes */}
       <SectionWrapper className="bg-muted/30">
-        <div className="mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+        <div className="mb-8 text-center">
+          <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+            Explore All Our Programs
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-3">
             Our Programmes
           </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-            Discover our diverse range of programmes designed to nurture growth at every stage of life
+          <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
+            Your child has one childhood — make it memorable. Get engaged, explore, experience.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {programmes.map((programme) => (
             <ProgrammeCard
               key={programme.title}
@@ -144,72 +181,91 @@ export default function Home() {
             />
           ))}
         </div>
-      </SectionWrapper>
-
-      {/* Inspirational Quote */}
-      <SectionWrapper className="bg-primary text-primary-foreground">
-        <div className="max-w-3xl mx-auto text-center">
-          <blockquote className="text-2xl md:text-3xl font-serif italic mb-6">
-            &quot;Every person has the potential to grow, learn, and thrive when provided with the
-            right environment and support.&quot;
-          </blockquote>
-          <p className="font-medium">— Samriddhi Philosophy</p>
+        <div className="text-center mt-8">
+          <a
+            href="/programmes"
+            className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            View All Programmes
+          </a>
         </div>
       </SectionWrapper>
 
-      {/* Founder Section */}
-      <SectionWrapper className="bg-background">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
-            About Our Founder
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* TODO: Replace with actual founder image */}
-            <div className="bg-muted rounded-lg h-80 flex items-center justify-center text-muted-foreground">
-              Founder Photo
-            </div>
-            <div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4">
-                Our Vision Leader
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                With a background in neuroscience and education, our founder created Samriddhi to
-                bridge the gap between scientific research and practical learning. Passionate about
-                human development, they have dedicated their life to creating transformative
-                educational experiences.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Their vision is a world where every individual has access to education that honors
-                their unique nature and nurtures their potential to become their best selves.
-              </p>
-            </div>
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* CTA Section */}
-      <SectionWrapper className="bg-gradient-to-r from-primary to-accent text-white">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Journey?
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            Join thousands of individuals who have experienced transformation through our programmes.
+      {/* Enroll CTA */}
+      <SectionWrapper className="bg-accent text-accent-foreground text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="font-serif text-xl md:text-2xl italic font-medium mb-3">
+            &ldquo;I am confident, I am communicative, I am curious — I am ready for school and for life.&rdquo;
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/programmes"
-              className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              View Programmes
-            </a>
-            <a
-              href="/contact"
-              className="inline-block bg-primary-foreground/20 border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              Get in Touch
-            </a>
+          <p className="text-sm opacity-80 mb-6">
+            &ldquo;The question is not whether you can afford to invest in Early Learning; it is whether you can afford
+            not to.&rdquo;
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            ENROLL NOW
+          </a>
+        </div>
+      </SectionWrapper>
+
+      {/* Founders */}
+      <SectionWrapper className="bg-background">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-2">
+              Know Our
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Founders</h2>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Founder 1 */}
+            <div className="bg-card rounded-lg p-6 shadow-md text-center border-t-4 border-accent">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-primary-foreground font-serif text-2xl font-bold">N</span>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-1">Ms. Neetu</h3>
+              <p className="text-secondary font-medium text-sm mb-4">Founder</p>
+              <a
+                href="/about"
+                className="inline-block text-sm font-semibold text-primary hover:text-accent transition-colors"
+              >
+                View Profile →
+              </a>
+            </div>
+            {/* Founder 2 */}
+            <div className="bg-card rounded-lg p-6 shadow-md text-center border-t-4 border-primary">
+              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-secondary-foreground font-serif text-2xl font-bold">M</span>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-1">
+                Dr. Mahesh Pavar (PHD)
+              </h3>
+              <p className="text-secondary font-medium text-sm mb-4">Co-Founder & Trustee</p>
+              <a
+                href="/vision"
+                className="inline-block text-sm font-semibold text-primary hover:text-accent transition-colors"
+              >
+                View Vision →
+              </a>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Final CTA */}
+      <SectionWrapper className="bg-secondary text-secondary-foreground text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+            See Our Special Features &amp; Activities!
+          </h2>
+          <a
+            href="/contact"
+            className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            Get Involved
+          </a>
         </div>
       </SectionWrapper>
 
