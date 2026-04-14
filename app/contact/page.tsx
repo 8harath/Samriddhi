@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { HeroSection } from '@/components/hero-section'
+import { PageHeader } from '@/components/page-header'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
@@ -35,9 +35,9 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection
+      <PageHeader
         title="Contact Us"
-        subtitle="We&apos;d love to hear from you — reach out to us today"
+        subtitle="We'd love to hear from you — reach out to us today"
       />
 
       <SectionWrapper className="bg-background">

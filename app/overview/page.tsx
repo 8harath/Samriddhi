@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { HeroSection } from '@/components/hero-section'
+import { PageHeader } from '@/components/page-header'
 import { SectionWrapper } from '@/components/section-wrapper'
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function OverviewPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection
+      <PageHeader
         title="Overview"
         subtitle="A unique learning program designed for very young kids"
       />

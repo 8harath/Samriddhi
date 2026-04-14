@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { HeroSection } from '@/components/hero-section'
+import { PageHeader } from '@/components/page-header'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { X } from 'lucide-react'
 
@@ -78,7 +78,7 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection
+      <PageHeader
         title="Our Gallery"
         subtitle="We are a group of teachers who love children and enjoy every moment of teaching"
       />

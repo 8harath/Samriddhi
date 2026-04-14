@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { HeroSection } from '@/components/hero-section'
+import { PageHeader } from '@/components/page-header'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { Eye, Compass } from 'lucide-react'
 
@@ -15,7 +15,7 @@ export default function VisionPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection
+      <PageHeader
         title="Vision &amp; Mission"
         subtitle="The beliefs and values that guide everything we do"
       />

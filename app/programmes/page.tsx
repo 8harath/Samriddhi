@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { HeroSection } from '@/components/hero-section'
+import { PageHeader } from '@/components/page-header'
 import { SectionWrapper } from '@/components/section-wrapper'
 import { ProgrammeCard } from '@/components/programme-card'
 import {
@@ -98,7 +98,7 @@ export default function ProgrammesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection
+      <PageHeader
         title="Our Programmes"
         subtitle="Your child has one childhood — make it memorable"
       />
